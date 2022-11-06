@@ -25,7 +25,7 @@ for (let i = 0; i < images.length; i++) {
 // Button Prev
 prevBtn.addEventListener ("click", function() {
     if (currentImg -1 < 0){
-        return
+        currentImg = images.length;
     }
 
     const activeImg = document.querySelector(".img-active");
@@ -42,7 +42,7 @@ prevBtn.addEventListener ("click", function() {
 // Button next
 nextBtn.addEventListener ("click", function() {
     if (currentImg + 1  >= images.length){
-        return
+        currentImg = -1
     }
 
     const activeImg = document.querySelector(".img-active");
